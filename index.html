@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5334321007642186"
+    crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex, nofollow, noimageindex, noarchive, nosnippet">
+        <meta name="description" content="Conversor de HTML para XML - Converta facilmente código HTML para o formato XML.">
+        <meta name="keywords" content="HTML, XML, Conversor, Código">
+        <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4494uMUgDzmugNbncDv4Sf1TRkK83btSnRSaSliAUWYrKNqTvcIYcl_pAFq4J8KHF5F5je4VsgT0a0AtW1WUXemSGjCLPywPwV3WlnDJlUsoJYdr6ghkTD5Zw0ag2fwQdn6Ub266pSrnDH7qQU_kf0UW-kWqtQzKVooZOhBOsju3wezBtq2coTMb4JAk/w320-h320/web-development.png">
+        <title>Conversor de HTML para XML</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      
+      
+ <style>
+     :root {
+  --cor-de-fundo: #f4f8fa;
+  --cor-dos-textos: #333;
+  --cor-dos-botoes: #ff0707;
+}
+
+body {
+  background-color: var(--cor-de-fundo);
+  color: var(--cor-dos-textos);
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.bg-light {
+  background-color: var(--cor-de-fundo)!important;
+  border-radius: 10px;
+}
+
+header {
+  background-color: var(--cor-dos-botoes);
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  color: var(--cor-dos-textos);
+  font-size: 24px;
+}
+
+.navbar-toggler {
+  border-color: transparent;
+  color: var(--cor-dos-textos);
+  font-size: 28px;
+}
+
+.navbar-toggler:hover, .navbar-toggler:focus {
+  border-color: transparent;
+  color: var(--cor-dos-textos);
+}
+
+.navbar-toggler-icon {
+  background-color: var(--cor-dos-botoes);
+  border-radius: 5px;
+}
+
+.introduction {
+  text-align: center;
+  padding: 40px 0;
+  background-color: var(--cor-de-fundo);
+}
+
+.tool-name {
+  font-size: 32px;
+  margin-bottom: 20px;
+  background-color: var(--cor-dos-botoes);
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.tool-description {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#convertBtn {
+  display: block;
+  margin-top: 10px;
+  background-color: var(--cor-dos-botoes);
+  border-color: var(--cor-dos-botoes);
+  color: var(--cor-dos-textos);
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 100%;
+}
+
+#xmlOutput {
+  height: 200px;
+}
+
+footer {
+  background-color: var(--cor-dos-botoes);
+  padding: 20px;
+  text-align: center;
+  color: var(--cor-dos-textos);
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: var(--cor-dos-textos);
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+  text-align: center;
+  padding-top: 100px;
+  overflow-y: auto;
+}
+
+.popup-content {
+  background-color: var(--cor-de-fundo);
+  padding: 20px;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  color: var(--cor-dos-textos);
+  overflow-y: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--cor-dos-textos);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Ads Css COde */
+.ad-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100px;
+  margin-bottom: 10px;
+}
+
+.ad-container {
+  width: 100%;
+  max-width: 720px;
+  height: 90px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.ad-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ad-content {
+  width: 100%;
+  height: 100%;
+  background-color: var(--cor-de-fundo);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.ad-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--cor-dos-textos);
+}
+
+.ad-button {
+  display: block;
+  margin-top: 10px;
+  background-color: var(--cor-dos-botoes);
+  border-color: var(--cor-dos-botoes);
+  color: var(--cor-dos-textos);
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.btn-primary{
+  display: block;
+  margin-top: 10px;
+  background-color: var(--cor-dos-botoes);
+  border-color: var(--cor-dos-botoes);
+  color: var(--cor-dos-textos);
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.coryright {
+  margin-top: 10px;
+  background-color: var(--cor-dos-botoes);
+  border-color: var(--cor-dos-botoes);
+  color: var(--cor-dos-textos);
+  padding: 3px 4px;
+  border-radius: 5px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+#clearBtn,
+#copyBtn {
+  display: block;
+  margin-top: 10px;
+  background-color: var(--cor-dos-botoes);
+  border-color: var(--cor-dos-botoes);
+  color: var(--cor-dos-textos);
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 100%;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img style="width: 45px;" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4494uMUgDzmugNbncDv4Sf1TRkK83btSnRSaSliAUWYrKNqTvcIYcl_pAFq4J8KHF5F5je4VsgT0a0AtW1WUXemSGjCLPywPwV3WlnDJlUsoJYdr6ghkTD5Zw0ag2fwQdn6Ub266pSrnDH7qQU_kf0UW-kWqtQzKVooZOhBOsju3wezBtq2coTMb4JAk/w320-h320/web-development.png" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a style="color: #000;" class="nav-link" href="/">🏠 Início</a></li>
+            <li class="nav-item"><a style="color: #000;"  href="#aboutPopup" class="nav-link popup-link" data-popup="#aboutPopup">💡 Sobre nós</a></li>
+            <li class="nav-item"><a style="color: #000;" href="#contactPopup" class="nav-link popup-link" data-popup="#contactPopup">📞 Contate-nos</a></li>
+            <li class="nav-item"><a style="color: #000;" href="#pagesPopup" class="nav-link popup-link" data-popup="#pagesPopup">📚 Política de privacidade</a></li>
+            <li class="nav-item"><a style="color: #000;" href="#toolsPopup" class="nav-link popup-link" data-popup="#toolsPopup">🛠️ Aviso legal</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="container">
+        <div class="introduction">
+          <h1 class="tool-name">Conversor de HTML para XML</h1>
+          <p class="tool-description">🌐 Conversor de HTML para XML: Converta seu código HTML para XML sem esforço! 🔄</p>
+          <!-- Início do espaço para anúncios -->
+          <div class="ad-wrapper">
+            <div class="ad-container">
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5334321007642186"
+              crossorigin="anonymous"></script>
+         <!-- Topo -->
+         <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-5334321007642186"
+              data-ad-slot="4600395840"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+         <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+         </script>
+            </div>
+          </div>        
+          <!-- Fim do espaço para anúncios -->  
+          <p class="tool-description">Bem-vindo ao nosso site Conversor de HTML para XML, onde você pode facilmente transformar seus documentos HTML em formato XML. Seja você um desenvolvedor web, um analista de dados ou simplesmente procurando converter seus arquivos HTML, nossa ferramenta está aqui para simplificar o processo.</p>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <textarea id="htmlInput" rows="10" class="form-control" placeholder="Insira seu código HTML aqui"></textarea>
+            <center><button id="convertBtn" class="btn btn-primary">Converter para XML</button></center><br>
+            <!-- Início do espaço para anúncios -->
+          <div class="ad-wrapper">
+            <div class="ad-container">
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5334321007642186"
+              crossorigin="anonymous"></script>
+         <!-- Topo -->
+         <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-5334321007642186"
+              data-ad-slot="4600395840"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+         <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+         </script>
+            </div>
+          </div>        
+          <!-- Fim do espaço para anúncios -->  
+          <br>
+            <textarea id="xmlOutput" rows="10" class="form-control" readonly></textarea>
+            <center><a id="downloadBtn" class="btn btn-primary" href="#" download="converted.xml">Baixar XML</a></center>
+            <button id="clearBtn" class="btn btn-primary">Limpar código XML</button>
+            <button id="copyBtn" class="btn btn-primary">Copiar para a área de transferência</button>
+          </div>
+        </div>
+      </div>
+  
+    <br>
+    <!-- Ads Place Start -->
+    <div class="ad-wrapper">
+      <div class="ad-container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5334321007642186"
+     crossorigin="anonymous"></script>
+<!-- Topo -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5334321007642186"
+     data-ad-slot="4600395840"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      </div>
+    </div>        
+    <!-- Ads Place End-->  
+    <br>
+    <article class="container">
+        <center><h2>Sobre o Conversor de HTML para XML</h2></center>
+        <h5>Passo 1: Insira seu código HTML 📥</h5>
+        <p>Comece copiando seu código HTML e colando-o na área de texto designada.</p>
+      
+        <h5>Passo 2: Converter para XML ✨</h5>
+        <p>Clique no botão "Converter" para iniciar o processo de conversão.</p>
+        <p>Nosso conversor analisará seu código HTML e o transformará em formato XML válido.</p>
+      
+        <h5>Passo 3: Baixe seu arquivo XML 📤</h5>
+        <p>Uma vez concluída a conversão, um link de download será fornecido.</p>
+        <p>Basta clicar no link para baixar seu arquivo XML para o seu dispositivo.</p>
+      
+        <h5>Passo 4: Edite e reconverte 🔄</h5>
+        <p>Se necessário, você pode fazer modificações no seu código HTML e reconverter para XML.</p>
+        <p>Repita o processo de conversão colando seu código HTML atualizado e clicando novamente no botão "Converter".</p>
+      
+        <h5>Passo 5: Seguro e confiável 🛡️</h5>
+        <p>Sua privacidade e segurança de dados são nossas principais prioridades.</p>
+        <p>Esteja certo de que seu código HTML é manuseado com segurança em nossa infraestrutura de servidor confiável.</p>
+      
+        <h5>Passo 6: Compatibilidade entre navegadores 🌐</h5>
+        <p>Nosso site Conversor de HTML para XML funciona perfeitamente em diferentes navegadores da web.</p>
+        <p>Seja você prefere Chrome, Firefox, Safari, ou qualquer outro navegador popular, nosso site garante um desempenho consistente.</p>
+      
+        <h5>Passo 7: Gratuito e acessível 🆓</h5>
+        <p>Nosso Conversor de HTML para XML é completamente gratuito para usar, sem quaisquer taxas ocultas ou assinaturas.</p>
+        <p>Acesse nosso conversor de qualquer lugar com uma conexão à internet, tornando-o facilmente acessível.</p>
+      
+        <h5>Passo 8: Interface amigável ao usuário 🌟</h5>
+        <p>Navegue pelo nosso site sem esforço com sua interface limpa e intuitiva.</p>
+        <p>Nosso conversor é projetado para ser amigável para iniciantes, independentemente de sua experiência técnica.</p>
+      
+        <h5>Comece agora! 🚀</h5>
+        <p>Comece a usar nosso Conversor de HTML para XML para converter sem esforço seu código HTML em formato XML.</p>
+        <p>Economize tempo, garanta a precisão e aprimore seu fluxo de trabalho de documentos XML!</p>
+      </article>
+  
+    <br>
+    <!-- Ads Place Start -->
+    <div class="ad-wrapper">
+      <div class="ad-container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5334321007642186"
+     crossorigin="anonymous"></script>
+<!-- Topo -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5334321007642186"
+     data-ad-slot="4600395840"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      </div>
+    </div>        
+    <!-- Ads Place End-->  
+  </main>
+
+  <footer class="bg-light text-center">
+    <div class="container">
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#aboutPopup" class="popup-link" data-popup="#aboutPopup">💡 Sobre nós</a></li>
+        <li class="list-inline-item"><a href="#contactPopup" class="popup-link" data-popup="#contactPopup">📞 Contate-nos</a></li>
+        <li class="list-inline-item"><a href="#pagesPopup" class="popup-link" data-popup="#pagesPopup">📚 Política de privacidade</a></li>
+        <li class="list-inline-item"><a href="#toolsPopup" class="popup-link" data-popup="#toolsPopup">🛠️ Aviso legal</a></li>
+      </ul>
+      <p>Crédito por <strong><a class="coryright" href="https://www.youtube.com/@copiares">Copiares</a></strong></p>
+    </div>
+  </footer>
+
+
+  <!-- Popup Modules -->
+  <div id="pagesPopup" class="popup">
+    <div class="popup-content">
+        <h2>Política de Privacidade 📚</h2>
+        <h1>Política de privacidade do conversor de HTML para Xml </h1>
+ 
+ <p>No Html to Xml Converter , acessível em https:seudominio.com, uma de nossas principais prioridades é a privacidade de nossos visitantes. Este documento de Política de Privacidade contém tipos de informações que são coletadas e registradas pelo Html to Xml Converter e como as usamos.</p>
+ 
+ <p>Se você tiver dúvidas adicionais ou precisar de mais informações sobre nossa Política de Privacidade, não hesite em nos contatar.</p>
+ 
+ <p>Esta Política de Privacidade se aplica apenas às nossas atividades on-line e é válida para os visitantes do nosso site no que diz respeito às informações que eles compartilharam e/ou coletaram no Html to Xml Converter. Esta política não se aplica a quaisquer informações coletadas off-line ou por meio de canais que não sejam este site.</p>
+ 
+ <h2>Consentimento</h2>
+ 
+ <p>Ao usar nosso site, você concorda com nossa Política de Privacidade e com seus termos.</p>
+ 
+ <h2>Informações que coletamos</h2>
+ 
+ <p>As informações pessoais que você deverá fornecer e os motivos pelos quais você será solicitado a fornecê-las serão esclarecidos no momento em que solicitarmos que você forneça suas informações pessoais.</p>
+ <p>Se você entrar em contato conosco diretamente, poderemos receber informações adicionais sobre você, como seu nome, endereço de e-mail, número de telefone, o conteúdo da mensagem e/ou anexos que você nos enviar e qualquer outra informação que você decida fornecer. .</p>
+ <p>Quando você se registra para uma conta, podemos solicitar suas informações de contato, incluindo itens como nome, nome da empresa, endereço, endereço de e-mail e número de telefone.</p>
+ 
+ <h2>Como usamos suas informações</h2>
+ 
+ <p>Usamos as informações que coletamos de diversas maneiras, inclusive para:</p>
+ 
+ <ul>
+ <li>Fornecer, operar e manter nosso site</li>
+ <li>Melhorar, personalizar e expandir nosso site</li>
+ <li>Entenda e analise como você usa nosso site</li>
+ <li>Desenvolver novos produtos, serviços, recursos e funcionalidades</li>
+ <li>Entre em contato com você, diretamente ou por meio de um de nossos parceiros, inclusive para atendimento ao cliente, para fornecer atualizações e outras informações relacionadas ao site e para fins promocionais e de marketing.</li>
+ <li>Enviar e-mails para você</li>
+ <li>Encontre e evite fraudes</li>
+ </ul>
+ 
+ <h2>Arquivos de registro</h2>
+ 
+ <p>O Html to Xml Converter segue um procedimento padrão de uso de arquivos de log. Esses arquivos registram visitantes quando visitam sites. Todas as empresas de hospedagem fazem isso e fazem parte da análise dos serviços de hospedagem. As informações coletadas pelos arquivos de log incluem endereços de protocolo de Internet (IP), tipo de navegador, provedor de serviços de Internet (ISP), carimbo de data e hora, páginas de referência/saída e, possivelmente, o número de cliques. Eles não estão vinculados a nenhuma informação que seja pessoalmente identificável. O objetivo das informações é analisar tendências, administrar o site, rastrear o movimento dos usuários no site e coletar informações demográficas.</p>
+ 
+ <h2>Cookies e web beacons</h2>
+ 
+ <p>Como qualquer outro site, o Html to Xml Converter usa "cookies". Estes cookies são utilizados para armazenar informações, incluindo as preferências dos visitantes e as páginas do site que o visitante acessou ou visitou. As informações são usadas para otimizar a experiência dos usuários, personalizando o conteúdo da nossa página da web com base no tipo de navegador dos visitantes e/ou outras informações.</p>
+ 
+ <h2>Cookie DART do Google DoubleClick</h2>
+ 
+ <p>O Google é um fornecedor terceirizado do nosso site. Ele também usa cookies, conhecidos como cookies DART, para veicular anúncios aos visitantes do nosso site com base em suas visitas a www.website.com e outros sites na Internet. No entanto, os visitantes podem optar por recusar o uso de cookies DART visitando a Política de privacidade de anúncios e da rede de conteúdo do Google no seguinte URL – <a href="https://policies.google.com/technologies/ads">https:/ /policies.google.com/technologies/ads</a></p>
+ 
+ <h2>Nossos parceiros de publicidade</h2>
+ 
+ <p>Alguns anunciantes em nosso site podem usar cookies e web beacons. Nossos parceiros de publicidade estão listados abaixo. Cada um dos nossos parceiros publicitários tem a sua própria Política de Privacidade para as suas políticas sobre dados do utilizador. Para facilitar o acesso, criamos um hiperlink para as Políticas de Privacidade abaixo.</p>
+ 
+ <ul>
+      <li>
+          <p>Google</p>
+          <p><a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+      </li>
+ </ul>
+ 
+ <h2>Políticas de privacidade de parceiros de publicidade</h2>
+ 
+ <P>Você pode consultar esta lista para encontrar a Política de Privacidade de cada um dos parceiros de publicidade do Html to Xml Converter.</p>
+ 
+ <p>Servidores de anúncios ou redes de anúncios de terceiros usam tecnologias como cookies, JavaScript ou Web Beacons que são usados em seus respectivos anúncios e links que aparecem no Html to Xml Converter , que são enviados diretamente ao navegador dos usuários. Eles recebem automaticamente seu endereço IP quando isso ocorre. Essas tecnologias são usadas para medir a eficácia de suas campanhas publicitárias e/ou para personalizar o conteúdo publicitário que você vê nos sites que visita.</p>
+ 
+ <p>Observe que o Html to Xml Converter não tem acesso ou controle sobre ver esses cookies que são usados por anunciantes terceiros.</p>
+ 
+ <h2>Políticas de privacidade de terceiros</h2>
+ 
+ <p>A Política de Privacidade do Html to Xml Converter não se aplica a outros anunciantes ou sites. Assim, aconselhamos que consulte as respetivas Políticas de Privacidade destes servidores de anúncios de terceiros para obter informações mais detalhadas. Pode incluir suas práticas e instruções sobre como cancelar determinadas opções. </p>
+ 
+ <p>Você pode optar por desativar os cookies através das opções individuais do seu navegador. Para saber informações mais detalhadas sobre o gerenciamento de cookies com navegadores específicos, você pode encontrá-las nos respectivos sites dos navegadores.</p>
+ 
+ <h2>Direitos de privacidade da CCPA (não vender minhas informações pessoais)</h2>
+ 
+ <p>De acordo com a CCPA, entre outros direitos, os consumidores da Califórnia têm o direito de:</p>
+ <p>Solicite que uma empresa que coleta dados pessoais de um consumidor divulgue as categorias e os dados pessoais específicos que uma empresa coletou sobre os consumidores.</p>
+ <p>Solicite que uma empresa exclua quaisquer dados pessoais sobre o consumidor que ela tenha coletado.</p>
+ <p>Solicite que uma empresa que vende dados pessoais de um consumidor não venda os dados pessoais do consumidor.</p>
+ <p>Se você fizer uma solicitação, teremos um mês para responder. Se desejar exercer algum desses direitos, entre em contato conosco.</p>
+ 
+ <h2>Direitos de proteção de dados do GDPR</h2>
+ 
+ <p>Gostaríamos de ter certeza de que você está plenamente ciente de todos os seus direitos de proteção de dados. Todo usuário tem direito ao seguinte:</p>
+ <p>O direito de acesso – Você tem o direito de solicitar cópias dos seus dados pessoais. Poderemos cobrar uma pequena taxa por este serviço.</p>
+ <p>O direito à retificação – Você tem o direito de solicitar que corrijamos qualquer informação que você acredite ser imprecisa. Você também tem o direito de solicitar que completemos as informações que você acredita estarem incompletas.</p>
+ <p>O direito ao apagamento – Você tem o direito de solicitar que apaguemos seus dados pessoais, sob certas condições.</p>
+ <p>O direito de restringir o processamento – Você tem o direito de solicitar que restrinjamos o processamento dos seus dados pessoais, sob certas condições.</p>
+ <p>O direito de se opor ao processamento – Você tem o direito de se opor ao nosso processamento de seus dados pessoais, sob certas condições.</p>
+ <p>O direito à portabilidade de dados – Você tem o direito de solicitar que transfiramos os dados que coletamos para outra organização, ou diretamente para você, sob certas condições.</p>
+ <p>Se você fizer uma solicitação, teremos um mês para responder. Se desejar exercer algum desses direitos, entre em contato conosco.</p>
+ 
+ <h2>Informações para crianças</h2>
+ 
+ <p>Outra parte da nossa prioridade é adicionar proteção às crianças durante o uso da Internet. Incentivamos os pais e responsáveis a observar, participar e/ou monitorar e orientar suas atividades on-line.</p>
+ 
+ <p>O Html to Xml Converter não coleta intencionalmente nenhuma informação pessoal identificável de crianças menores de 13 anos. Se você acha que seu filho forneceu esse tipo de informação em nosso site, recomendamos fortemente que você entre em contato conosco imediatamente e faremos isso nossos melhores esforços para remover prontamente essas informações de nossos registros.</p>
+ 
+ <h2>Alterações nesta Política de Privacidade</h2>
+ 
+ <p>Podemos atualizar nossa Política de Privacidade de tempos em tempos. Assim, aconselhamos que reveja esta página periodicamente para quaisquer alterações. Iremos notificá-lo sobre quaisquer alterações publicando a nova Política de Privacidade nesta página. Essas alterações entrarão em vigor imediatamente após serem publicadas nesta página.</p>
+ 
+ <p>Nossa Política de Privacidade foi criada com a ajuda do <a href="https://www.termsfeed.com/privacy-policy-generator/">Gerador de Política de Privacidade</a>.</p>
+ 
+ <h2>Entre em contato conosco</h2>
+ 
+ <p>Se você tiver alguma dúvida ou sugestão sobre nossa Política de Privacidade, não hesite em nos contatar.</p>
+        <span class="close-btn" data-popup="#pagesPopup">&times;</span>
+      </div>
+ 
+  </div>
+
+  <div id="aboutPopup" class="popup">
+    <div class="popup-content">
+        <h2>Sobre nós 💡</h2>
+        <p>Bem-vindo ao Conversor HTML para XML, sua ferramenta confiável para transformar código HTML em formato XML! 📄➡️📃</p>
+        <h5>Nossa Missão 🎯</h5>
+        <p>No HTML to XML Converter, nossa missão é simplificar o processo de conversão e fornecer uma experiência perfeita para desenvolvedores, criadores de conteúdo e qualquer pessoa que trabalhe com documentos XML. ✨🚀</p>
+     
+        <h5>Por que nos escolher? 🤔</h5>
+            <h5>Eficiência ⏱️</h5>
+            <p>Nosso conversor garante a conversão rápida e precisa do seu código HTML em um formato XML válido. Economize tempo e esforço valiosos ao realizar a conversão manualmente. 💪</p>
+ 
+            <h5>Interface amigável 🖥️</h5>
+            <p>Priorizamos a usabilidade, proporcionando uma interface limpa e intuitiva. Quer você seja um desenvolvedor experiente ou novato, nosso conversor foi projetado para ser fácil de usar. 👩‍💻👨‍💻</p>
+ 
+            <h5>Privacidade e segurança 🔒</h5>
+            <p>Valorizamos a privacidade e a segurança dos seus dados. Ao usar nosso conversor, tenha certeza de que seu código HTML será tratado de forma segura e mantido confidencial. 🛡️🔐</p>
+ 
+            <h5>Compatibilidade entre navegadores 🌍</h5>
+            <p>Nosso conversor funciona perfeitamente em diferentes navegadores da Web, garantindo uma experiência consistente, independentemente do navegador de sua preferência. 🌐✨</p>
+ 
+            <h5>Gratuito e Acessível 🆓🌈</h5>
+            <p>Acreditamos em fornecer ferramentas acessíveis à comunidade. Nosso conversor de HTML para XML é totalmente gratuito, sem quaisquer custos ou limitações ocultas. 🎁🌟</p>
+            <h5>Suporte confiável 🤝🔧</h5>
+            <p>Se você encontrar algum problema ou tiver dúvidas ao usar nosso conversor, nossa equipe de suporte dedicada está aqui para ajudá-lo. Nós nos esforçamos para fornecer suporte oportuno e útil para garantir uma experiência tranquila. 📞💡</p>
+        <h4>Comece a converter hoje mesmo! 🚀</h4>
+        <p>Aproveite agora nosso conversor de HTML para XML e simplifique seu fluxo de trabalho de documentos XML. Experimente a eficiência, conveniência e precisão que nosso conversor oferece. ✨💼</p>
+        <p>Obrigado por escolher o Conversor HTML para XML! 🙏😊</p>
+        <br>
+        <br>
+        <span class="close-btn" data-popup="#aboutPopup">&times;</span>
+      </div>
+  </div>
+
+  <div id="contactPopup" class="popup">
+    <div class="popup-content">
+        <h2>Entre em contato conosco 📞</h2>
+        <p>Se você tiver alguma dúvida, feedback ou precisar de ajuda, não hesite em nos contatar. Estamos aqui para ajudar!</p>
+    <h5>E-mail 📧</h5>
+    <p>Você pode entrar em contato conosco por e-mail em <a href="mailto:blaseads@gmail.com">blaseads@gmail.com</a>. Entraremos em contato com você o mais breve possível.</p>
+    <h5>Siga-nos nas redes sociais 🌐</h5>
+    <p>Fique atualizado com as últimas notícias, atualizações e dicas seguindo-nos nas redes sociais:</p>
+    <ul>
+      Twitter: <a href="https://twitter.com/copiares">@copiares</a><br>
+      TikTok: <a href="https://tiktok.com/@copiares">copiar</a><br>
+      Blogger: <a href="https://copiares.blogspot.com">copia</a><br>
+    </ul>
+    <h5>Consultas comerciais 💼</h5>
+    <p>Se você tiver alguma dúvida de negócios ou oportunidades de parceria, envie um email para <a href="mailto:blaseads@gmail.com">blaseads@gmail.com</a>. Estamos ansiosos para ouvir de você!</p>
+    <h5>Obrigado! 😊</h5>
+    <p>Obrigado por usar nosso conversor de HTML para XML e por entrar em contato conosco. Agradecemos seu apoio e feedback!</p>
+    <br>
+    <br>
+        <span class="close-btn" data-popup="#contactPopup">&times;</span>
+      </div>
+  </div>
+
+  <div id="toolsPopup" class="popup">
+    <div class="popup-content">
+        <h2>Isenção de responsabilidade 🛠️</h2>
+        <h1>Isenção de responsabilidade para conversor de HTML para Xml </h1>
+ 
+ <p>Se você precisar de mais informações ou tiver alguma dúvida sobre a isenção de responsabilidade do nosso site, sinta-se à vontade para nos contatar pelo e-mail blaseads@gmail.com. Nosso Termo de Isenção de Responsabilidade foi gerado com a ajuda do <a href="https://www.disclaimergenerator.net/">Gerador de Isenção de Responsabilidade Gratuito</a>.</p>
+ 
+ <h2>Isenções de responsabilidade para conversor de HTML para Xml </h2>
+ 
+ <p>Todas as informações contidas neste site - https://soreceitas.github.io - são publicadas de boa fé e apenas para fins de informação geral. Html to Xml Converter não oferece nenhuma garantia sobre a integridade, confiabilidade e precisão dessas informações. Qualquer ação que você tome com base nas informações encontradas neste site (Conversor HTML para Xml) é por sua própria conta e risco. Html to Xml Converter não será responsável por quaisquer perdas e/ou danos relacionados ao uso de nosso site.</p>
+ 
+ <p>No nosso site, você pode visitar outros sites seguindo hiperlinks para esses sites externos. Embora nos esforcemos para fornecer apenas links de qualidade para sites úteis e éticos, não temos controle sobre o conteúdo e a natureza desses sites. Estes links para outros sites não implicam uma recomendação para todo o conteúdo encontrado nesses sites. Os proprietários e o conteúdo do site podem mudar sem aviso prévio e podem ocorrer antes que tenhamos a oportunidade de remover um link que possa ter ficado "ruim".</p>
+ 
+ <p>Esteja ciente também de que quando você sai do nosso site, outros sites podem ter políticas e termos de privacidade diferentes que estão além do nosso controle. Certifique-se de verificar as Políticas de Privacidade desses sites, bem como seus "Termos de Serviço" antes de iniciar qualquer negócio ou enviar qualquer informação.</p>
+ 
+ <h2>Consentimento</h2>
+ 
+ <p>Ao usar nosso site, você concorda com nossa isenção de responsabilidade e concorda com seus termos.</p>
+ 
+ <h2>Atualização</h2>
+ 
+ <p>Caso atualizemos, alteremos ou façamos quaisquer alterações neste documento, essas alterações serão publicadas com destaque aqui.</p>
+        <span class="close-btn" data-popup="#toolsPopup">&times;</span>
+      </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Get the HTML input and XML output elements
+    const htmlInput = document.getElementById('htmlInput');
+    const xmlOutput = document.getElementById('xmlOutput');
+
+    // Get the convert button
+    const convertBtn = document.getElementById('convertBtn');
+
+    // Get the download button
+    const downloadBtn = document.getElementById('downloadBtn');
+
+    // Add click event listener to the convert button
+    convertBtn.addEventListener('click', () => {
+      const htmlCode = htmlInput.value;
+      const xmlCode = convertToXML(htmlCode);
+      xmlOutput.value = xmlCode;
+      downloadBtn.href = `data:text/xml;charset=utf-8,${encodeURIComponent(xmlCode)}`;
+    });
+
+    // Function to convert HTML to XML
+    function convertToXML(htmlCode) {
+      // Your conversion logic goes here
+      // Replace this placeholder logic with your own implementation
+
+      // Replace < and > symbols with their XML entities
+      const encodedCode = htmlCode.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+      // Generate XML output
+      const xmlCode = `&lt;xml&gt;\n${encodedCode}\n&lt;/xml&gt;`;
+      return xmlCode;
+    }
+
+    // Popup functionality
+    const popupLinks = document.querySelectorAll('.popup-link');
+    const closeBtns = document.querySelectorAll('.close-btn');
+
+    popupLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const popupSelector = link.dataset.popup;
+        const popup = document.querySelector(popupSelector);
+        popup.style.display = 'block';
+      });
+    });
+
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const popupSelector = btn.dataset.popup;
+        const popup = document.querySelector(popupSelector);
+        popup.style.display = 'none';
+      });
+    });
+    // Get the clear and copy buttons
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+
+// Add click event listener to the clear button
+clearBtn.addEventListener('click', () => {
+  xmlOutput.value = '';
+});
+
+// Add click event listener to the copy button
+copyBtn.addEventListener('click', () => {
+  xmlOutput.select();
+  document.execCommand('copy');
+});
+
+// Add an event listener to clear the XML code when the HTML code is changed
+htmlInput.addEventListener('input', () => {
+  xmlOutput.value = '';
+});
+
+  </script>
+</body>
+</html>
